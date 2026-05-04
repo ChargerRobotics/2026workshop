@@ -14,19 +14,19 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * this project, you must also update the Main.java file in the project.
  */
 public class Robot extends TimedRobot {
-  private static final String kDefaultAuto = "Default";
-  private static final String kCustomAuto = "Cool Auto";
-  private String m_autoSelected;
-  private final SendableChooser<String> m_chooser = new SendableChooser<>();
+  private static final String DEFAULT_AUTO = "Default";
+  private static final String CUSTOM_AUTO = "Cool Auto";
+  private String autoSelected;
+  private final SendableChooser<String> chooser = new SendableChooser<>();
 
   /**
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
    */
   public Robot() {
-    m_chooser.setDefaultOption("Default Auto", kDefaultAuto);
-    m_chooser.addOption("My Auto", kCustomAuto);
-    SmartDashboard.putData("Auto choices", m_chooser);
+    chooser.setDefaultOption("Default Auto", DEFAULT_AUTO);
+    chooser.addOption("My Auto", CUSTOM_AUTO);
+    SmartDashboard.putData("Auto choices", chooser);
   }
 
   /**
@@ -51,19 +51,19 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousInit() {
-    m_autoSelected = m_chooser.getSelected();
+    autoSelected = chooser.getSelected();
     // m_autoSelected = SmartDashboard.getString("Auto Selector", kDefaultAuto);
-    System.out.println("Auto selected: " + m_autoSelected);
+    System.out.println("Auto selected: " + autoSelected);
   }
 
   /** This function is called periodically during autonomous. */
   @Override
   public void autonomousPeriodic() {
-    switch (m_autoSelected) {
-      case kCustomAuto:
+    switch (autoSelected) {
+      case CUSTOM_AUTO:
         // Put custom auto code here
         break;
-      case kDefaultAuto:
+      case DEFAULT_AUTO:
       default:
         // Put default auto code here
         break;
