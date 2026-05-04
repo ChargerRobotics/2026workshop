@@ -7,7 +7,6 @@ Make sure when installing to install `Everything` and not `Tools Only`. If you h
 
 ## Important Links
 * [FRC Control Systems Docs](https://docs.wpilib.org/en/stable/index.html)
-* [WPILib Java Docs](https://github.wpilib.org/allwpilib/docs/release/java/index.html)
+* [WPILib JavaDocs](https://github.wpilib.org/allwpilib/docs/release/java/index.html)
 * [REVLib Docs](https://docs.revrobotics.com/revlib)
 * [Phoenix 6 API Docs](https://v6.docs.ctr-electronics.com/en/stable/docs/api-reference/api-usage/index.html)
-
